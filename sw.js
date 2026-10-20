@@ -1,7 +1,7 @@
 // Keeps a copy of the app on the phone so it opens with no connection.
 // Bump VERSION whenever you upload a changed index.html.
-const VERSION = 'tray-table-v1';
-const FILES = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-512.png'];
+const VERSION = 'tray-table-v3';
+const FILES = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-512.png', './SCOWL-LICENSE.txt'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
 });
